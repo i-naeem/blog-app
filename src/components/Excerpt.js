@@ -6,7 +6,7 @@ export default function Excerpt({ post }) {
     <Card sx={{ marginBottom: '5px' }} variant='outlined'>
       <CardContent>
         <Stack sx={{ marginBottom: '5px' }}>
-          <Typography title={post.title} fontSize='28px' overflow='clip' fontWeight='600' textTransform='capitalize'>
+          <Typography title={post.title} fontSize='28px' overflow='clip' fontWeight='500' textTransform='capitalize'>
             {post.title}
           </Typography>
           <Typography>
