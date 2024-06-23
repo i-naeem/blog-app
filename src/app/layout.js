@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
                 borderColor='ActiveBorder'
               />
 
-              <Box display='flex' flexGrow={3} borderColor='ActiveBorder' minHeight='50vh'>
+              <Box display='flex' flexGrow={1} borderColor='ActiveBorder' minHeight='50vh'>
                 {children}
               </Box>
 

@@ -1,5 +1,13 @@
-import { Box, Divider, Typography } from '@mui/material';
+import PostExcerpt from '@/components/PostExcerpt';
+import { Box } from '@mui/material';
 
 export default function Home() {
-  return <h1>Hello World</h1>;
+  let posts = [1, 2, 3, 4, 5, 6, 7, 8];
+  return (
+    <Box display='flex' flexGrow={1} flexDirection='column'>
+      {posts.map(p => (
+        <PostExcerpt key={p} />
+      ))}
+    </Box>
+  );
 }
