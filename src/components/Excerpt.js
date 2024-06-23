@@ -5,8 +5,8 @@ export default function Excerpt({ post }) {
   return (
     <Card sx={{ marginBottom: '5px' }} variant='outlined'>
       <CardContent>
-        <Stack sx={{ marginBottom: '6px' }}>
-          <Typography title={post.title} fontSize='24px' overflow='clip' fontWeight='600' textTransform='capitalize'>
+        <Stack sx={{ marginBottom: '5px' }}>
+          <Typography title={post.title} fontSize='28px' overflow='clip' fontWeight='600' textTransform='capitalize'>
             {post.title}
           </Typography>
           <Typography>
@@ -17,13 +17,12 @@ export default function Excerpt({ post }) {
           </Typography>
         </Stack>
         <Box
-          as={Paper}
-          variant='outlined'
+          borderRadius={1}
           sx={{
             height: '360px',
             background: 'url(https://images.unsplash.com/photo-1512917774080-9991f1c4c750)',
             backgroundSize: 'cover',
-            marginBottom: '6px',
+            marginBottom: '10px',
           }}
         ></Box>
         <Typography variant='body1' sx={{ display: 'inline-block' }}>
