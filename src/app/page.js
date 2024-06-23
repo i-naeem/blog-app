@@ -1,4 +1,3 @@
-import PostExcerpt from '@/components/PostExcerpt';
 import { Box } from '@mui/material';
 
 export default function Home() {
@@ -6,7 +5,7 @@ export default function Home() {
   return (
     <Box display='flex' flexGrow={1} flexDirection='column'>
       {posts.map(p => (
-        <PostExcerpt key={p} />
+        <p>1</p>
       ))}
     </Box>
   );

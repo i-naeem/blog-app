@@ -20,75 +20,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <AppRouterCacheProvider options={{ key: 'css' }}>
-          <Box as='main' padding={3}>
-            <Box as='header' display='flex' justifyContent='space-between'>
-              <Box
-                display='flex'
-                minHeight='50px'
-                minWidth='120px'
-                borderRight={1}
-                borderBottom={1}
-                borderColor='ActiveBorder'
-              ></Box>
-              <Box
-                display='flex'
-                flexGrow={3}
-                borderBottom={1}
-                justifyContent='center'
-                borderColor='ActiveBorder'
-              ></Box>
-              <Box
-                display='flex'
-                minHeight='50px'
-                minWidth='120px'
-                borderLeft={1}
-                borderBottom={1}
-                borderColor='ActiveBorder'
-              />
-            </Box>
-
-            <Box display='flex' justifyContent='space-between' as='main'>
-              <Box
-                display='flex'
-                minHeight='50px'
-                minWidth='120px'
-                borderRight={1}
-                borderColor='ActiveBorder'
-              />
-
-              <Box display='flex' flexGrow={1} borderColor='ActiveBorder' minHeight='50vh'>
-                {children}
-              </Box>
-
-              <Box
-                display='flex'
-                minHeight='50px'
-                minWidth='120px'
-                borderLeft={1}
-                borderColor='ActiveBorder'
-              />
-            </Box>
-
-            <Box display='flex' justifyContent='space-between' as='footer'>
-              <Box
-                display='flex'
-                minHeight='50px'
-                minWidth='120px'
-                borderTop={1}
-                borderRight={1}
-                borderColor='ActiveBorder'
-              />
-              <Box display='flex' flexGrow={3} borderTop={1} borderColor='ActiveBorder' />
-              <Box
-                display='flex'
-                minHeight='50px'
-                minWidth='120px'
-                borderLeft={1}
-                borderTop={1}
-                borderColor='ActiveBorder'
-              />
-            </Box>
-          </Box>
+          <main>{children}</main>
         </AppRouterCacheProvider>
       </body>
     </html>
