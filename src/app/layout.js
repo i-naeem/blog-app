@@ -22,19 +22,28 @@ const border = '1px solid GrayText';
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={inter.className} style={{ margin: '0' }}>
+      <body className={inter.className} style={{ margin: '0', padding: '10px' }}>
         <AppRouterCacheProvider options={{ key: 'css' }}>
           <ThemeProvider theme={theme}>
-            <Grid as={Paper} square container sx={{ '& .MuiGrid-item': { padding: '30px' } }} padding='5px'>
+            <Grid as={Paper} elevation={0} square container sx={{ '& .MuiGrid-item': { padding: '20px' } }}>
               <Grid
                 as={Paper}
+                elevation={0}
                 square
                 item
                 lg={3}
                 borderColor='ActiveBorder'
                 sx={{ borderRight: border, borderBottom: border }}
               />
-              <Grid as={Paper} square item lg={6} borderColor='ActiveBorder' sx={{ borderBottom: border }}>
+              <Grid
+                as={Paper}
+                elevation={0}
+                square
+                item
+                lg={6}
+                borderColor='ActiveBorder'
+                sx={{ borderBottom: border }}
+              >
                 <Stack direction='row' justifyContent='space-between' alignItems='center'>
                   <Typography
                     fontSize='26px'
@@ -54,6 +63,7 @@ export default function RootLayout({ children }) {
               </Grid>
               <Grid
                 as={Paper}
+                elevation={0}
                 square
                 item
                 lg={3}
@@ -61,16 +71,34 @@ export default function RootLayout({ children }) {
                 sx={{ borderLeft: border, borderBottom: border }}
               />
 
-              <Grid as={Paper} square item lg={3} borderColor='ActiveBorder' borderRight={border} />
+              <Grid as={Paper} elevation={0} square item lg={3} borderColor='ActiveBorder' borderRight={border} />
 
-              <Grid as={Paper} square item lg={6} borderColor='ActiveBorder'>
+              <Grid as={Paper} elevation={0} square item lg={6} borderColor='ActiveBorder'>
                 {children}
               </Grid>
-              <Grid as={Paper} square item lg={3} borderColor='ActiveBorder' borderLeft={border} />
+              <Grid as={Paper} elevation={0} square item lg={3} borderColor='ActiveBorder' borderLeft={border} />
 
-              <Grid as={Paper} borderColor='ActiveBorder' square item lg={3} borderTop={border} borderRight={border} />
-              <Grid borderColor='ActiveBorder' as={Paper} square item lg={6} borderTop={border}></Grid>
-              <Grid borderColor='ActiveBorder' as={Paper} square item lg={3} borderTop={border} borderLeft={border} />
+              <Grid
+                as={Paper}
+                elevation={0}
+                borderColor='ActiveBorder'
+                square
+                item
+                lg={3}
+                borderTop={border}
+                borderRight={border}
+              />
+              <Grid borderColor='ActiveBorder' as={Paper} elevation={0} square item lg={6} borderTop={border}></Grid>
+              <Grid
+                borderColor='ActiveBorder'
+                as={Paper}
+                elevation={0}
+                square
+                item
+                lg={3}
+                borderTop={border}
+                borderLeft={border}
+              />
             </Grid>
           </ThemeProvider>
         </AppRouterCacheProvider>
