@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import { Box } from '@mui/material';
+import Link from 'next/link';
 
 export default function PostExcerpt(props) {
   return (
@@ -34,9 +35,11 @@ export default function PostExcerpt(props) {
       </CardContent>
       <CardActions>
         <Box display='flex' flexGrow='1' justifyContent='end'>
-          <Button variant='text' size='small'>
-            Read more...
-          </Button>
+          <Link href={`/posts/${props.postId}`} passHref>
+            <Button variant='text' size='small'>
+              Read more...
+            </Button>
+          </Link>
         </Box>
       </CardActions>
     </Card>
