@@ -17,14 +17,6 @@ export default function PostExcerpt(props) {
       />
 
       <CardContent>
-        <Box display='flex'>
-          <Typography fontSize='14px' color='text.secondary'>
-            by{' '}
-            <Box as='span' fontWeight='bold' color='primary'>
-              adjective
-            </Box>
-          </Typography>
-        </Box>
         <Typography gutterBottom variant='h5' component='div'>
           Lizard
         </Typography>
