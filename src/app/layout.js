@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <body className={inter.className}>
         <AppRouterCacheProvider options={{ key: 'css' }}>
-          <Grid container sx={{ '& .MuiGrid-item': { height: '60px' } }} padding='5px'>
+          <Grid container sx={{ '& .MuiGrid-item': { padding: '30px' } }} padding='5px'>
             <Grid item lg={2} sx={{ borderRight: border, borderBottom: border }} />
             <Grid item lg={8} sx={{ borderBottom: border }}></Grid>
             <Grid item lg={2} sx={{ borderLeft: border, borderBottom: border }} />
