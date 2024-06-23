@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang='en' style={{ margin: 0 }}>
       <body className={inter.className} style={{ margin: 0 }}>
         <AppRouterCacheProvider options={{ key: 'css' }}>
-          <header>
+          <Box as='header' padding='5px'>
             <Paper square>
               <Container>
                 <Box display='flex' alignItems='center' minHeight='60px'>
@@ -40,10 +40,17 @@ export default function RootLayout({ children }) {
                 </Box>
               </Container>
             </Paper>
-          </header>
-          <main>
-            <section>{children}</section>
-          </main>
+          </Box>
+          <Box as='main' display='flex' gap={1} padding='5px'>
+            <Box as='section' flexGrow={3}>
+              <Paper padding='5px'>{children}</Paper>
+            </Box>
+            <Box as='aside' flexGrow={2}>
+              <Paper padding='5px' square>
+                <Typography variant='h6'>Recent posts</Typography>
+              </Paper>
+            </Box>
+          </Box>
         </AppRouterCacheProvider>
       </body>
     </html>
