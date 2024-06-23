@@ -8,7 +8,7 @@ import '@fontsource/roboto/700.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-import { Box, Divider, Typography } from '@mui/material';
+import { Box, Button, Container, Divider, Paper, Typography } from '@mui/material';
 
 export const metadata = {
   title: 'Create Next App',
@@ -17,10 +17,33 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>
+    <html lang='en' style={{ margin: 0 }}>
+      <body className={inter.className} style={{ margin: 0 }}>
         <AppRouterCacheProvider options={{ key: 'css' }}>
-          <main>{children}</main>
+          <header>
+            <Paper square>
+              <Container>
+                <Box display='flex' alignItems='center' minHeight='60px'>
+                  <Box as='section' flexGrow='1'>
+                    <Typography variant='h5'>BlogApp</Typography>
+                  </Box>
+
+                  <section>
+                    <Button>Home</Button>
+                    <Button>About</Button>
+                    <Button>Contact us</Button>
+                  </section>
+
+                  <section>
+                    <Button>Dark Theme</Button>
+                  </section>
+                </Box>
+              </Container>
+            </Paper>
+          </header>
+          <main>
+            <section>{children}</section>
+          </main>
         </AppRouterCacheProvider>
       </body>
     </html>
