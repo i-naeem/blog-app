@@ -8,7 +8,7 @@ import '@fontsource/roboto/700.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-import { Box, Button, Container, Divider, Paper, Typography } from '@mui/material';
+import { Box, Button, Container, Divider, Grid, Paper, Typography } from '@mui/material';
 
 export const metadata = {
   title: 'Create Next App',
@@ -41,8 +41,17 @@ export default function RootLayout({ children }) {
               </Container>
             </Paper>
           </Box>
-          <Box as='main' gap={1} padding='5px'>
-            <Paper padding='5px'>{children}</Paper>
+          <Box as='main' padding='5px'>
+            <Grid container spacing={2}>
+              <Grid item xs={12} lg={9}>
+                <Paper padding='5px'>{children}</Paper>
+              </Grid>
+              <Grid item as='aside' xs={12} lg={3}>
+                <Paper padding='5px' elevation={0}>
+                  <Typography>Recent posts</Typography>
+                </Paper>
+              </Grid>
+            </Grid>
           </Box>
         </AppRouterCacheProvider>
       </body>
