@@ -41,15 +41,8 @@ export default function RootLayout({ children }) {
               </Container>
             </Paper>
           </Box>
-          <Box as='main' display='flex' gap={1} padding='5px'>
-            <Box as='section' flexGrow={3}>
-              <Paper padding='5px'>{children}</Paper>
-            </Box>
-            <Box as='aside' flexGrow={2}>
-              <Paper padding='5px' square>
-                <Typography variant='h6'>Recent posts</Typography>
-              </Paper>
-            </Box>
+          <Box as='main' gap={1} padding='5px'>
+            <Paper padding='5px'>{children}</Paper>
           </Box>
         </AppRouterCacheProvider>
       </body>
