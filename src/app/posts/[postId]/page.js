@@ -1,7 +1,17 @@
 import { Box, Paper, Typography } from '@mui/material';
 
-export default async function Post({ postId }) {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+export const generateMetadata = async ({ params }) => {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`);
+  const post = await response.json();
+
+  return {
+    title: post.title,
+    description: post.body.slice(0, 30),
+  };
+};
+
+export default async function Post({ params }) {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`);
   const post = await response.json();
 
   return (

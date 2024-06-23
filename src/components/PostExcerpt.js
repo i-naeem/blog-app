@@ -21,7 +21,7 @@ export default function PostExcerpt({ post }) {
         <Typography variant='body2' color='text.secondary'>
           {post.body}{' '}
           <Link href={`/posts/${post.id}`} passHref>
-            <MuLink>Read more...</MuLink>
+            <MuLink as='span'>Read more...</MuLink>
           </Link>
         </Typography>
       </CardContent>
