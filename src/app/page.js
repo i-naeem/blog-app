@@ -1,3 +1,5 @@
+import Excerpt from '@/components/Excerpt';
+
 export default async function Home() {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   const posts = await response.json();
@@ -5,7 +7,7 @@ export default async function Home() {
   return (
     <section>
       {posts.map((post) => (
-        <h1 key={post.id}>{post.title}</h1>
+        <Excerpt key={post.id} post={post} />
       ))}
     </section>
   );

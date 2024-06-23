@@ -22,19 +22,19 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <AppRouterCacheProvider options={{ key: 'css' }}>
           <Grid container sx={{ '& .MuiGrid-item': { padding: '30px' } }} padding='5px'>
-            <Grid item lg={2} sx={{ borderRight: border, borderBottom: border }} />
-            <Grid item lg={8} sx={{ borderBottom: border }}></Grid>
-            <Grid item lg={2} sx={{ borderLeft: border, borderBottom: border }} />
+            <Grid item lg={3} sx={{ borderRight: border, borderBottom: border }} />
+            <Grid item lg={6} sx={{ borderBottom: border }}></Grid>
+            <Grid item lg={3} sx={{ borderLeft: border, borderBottom: border }} />
 
-            <Grid item lg={2} borderRight={border} />
-            <Grid item lg={8}>
+            <Grid item lg={3} borderRight={border} />
+            <Grid item lg={6}>
               {children}
             </Grid>
-            <Grid item lg={2} borderLeft={border} />
+            <Grid item lg={3} borderLeft={border} />
 
-            <Grid item lg={2} borderTop={border} borderRight={border} />
-            <Grid item lg={8} borderTop={border}></Grid>
-            <Grid item lg={2} borderTop={border} borderLeft={border} />
+            <Grid item lg={3} borderTop={border} borderRight={border} />
+            <Grid item lg={6} borderTop={border}></Grid>
+            <Grid item lg={3} borderTop={border} borderLeft={border} />
           </Grid>
         </AppRouterCacheProvider>
       </body>
